@@ -6,6 +6,7 @@ TagManager:
   tags:
   - killa
   - spawner
+  - zomb
   layers:
   - Default
   - TransparentFX

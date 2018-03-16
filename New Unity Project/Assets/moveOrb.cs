@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class moveOrb : MonoBehaviour {
 
@@ -45,6 +46,7 @@ public class moveOrb : MonoBehaviour {
 			Destroy (gameObject);
 			GM.zValAdj = 0;
 			Instantiate (boomObj, transform.position, boomObj.rotation);
+			GM.gameStatus = "dead";
 		}
 
 		if (other.gameObject.name == "powerUp") {
@@ -57,7 +59,10 @@ public class moveOrb : MonoBehaviour {
 			GM.zPosColid += 40;
 			GM.zValAdj = 1;
 		}
-				
+		if (other.gameObject.tag == "zomb") {
+			GM.zombiesKilled += 1;
+			Destroy (other.gameObject);
+		}
 	}
 
 	IEnumerator stopSlide()
@@ -66,4 +71,5 @@ public class moveOrb : MonoBehaviour {
 		horizVel = 0;
 		controlLocked = "false";
 	}
+
 }

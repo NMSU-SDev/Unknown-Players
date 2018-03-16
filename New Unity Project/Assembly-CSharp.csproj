@@ -55,6 +55,9 @@
      <Compile Include="Assets\GM.cs" />
      <Compile Include="Assets\moveCamera.cs" />
      <Compile Include="Assets\moveOrb.cs" />
+     <Compile Include="Assets\stats.cs" />
+     <Compile Include="Assets\ZombieLeft.cs" />
+     <Compile Include="Assets\zombieRight.cs" />
  <Reference Include="UnityEngine.UIAutomation">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
  </Reference>
