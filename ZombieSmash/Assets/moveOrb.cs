@@ -51,6 +51,9 @@ public class moveOrb : MonoBehaviour {
 
 		if (other.gameObject.name == "powerUp") {
 			Destroy (other.gameObject);
+			GM.zValAdj = 8;
+			StartCoroutine (stopSlide2 ());
+
 		}
 		if (other.gameObject.tag == "spawner") {
 			Instantiate (path1, new Vector3(0, 0, GM.zPos), path1.rotation);
@@ -71,5 +74,9 @@ public class moveOrb : MonoBehaviour {
 		horizVel = 0;
 		controlLocked = "false";
 	}
-
+	IEnumerator stopSlide2()
+	{
+		yield return new WaitForSeconds(2.5f);
+		GM.zValAdj = 2;
+	}
 }
