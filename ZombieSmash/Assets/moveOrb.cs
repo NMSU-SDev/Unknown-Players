@@ -15,6 +15,10 @@ public class moveOrb : MonoBehaviour {
 	public Transform boomObj;
 	public Transform path1;
 	public Transform colis;
+	public Transform z1;
+	public Transform z2;
+	public Transform z3;
+	public Transform z4;
 
 	// Use this for initialization
 	void Start () {
@@ -56,6 +60,14 @@ public class moveOrb : MonoBehaviour {
 
 		}
 		if (other.gameObject.tag == "spawner") {
+			Instantiate (z1, new Vector3 (-3.5f, 1.55f, GM.zLeftOneL), z1.rotation);
+			Instantiate (z2, new Vector3 (-3.5f, 1.55f, GM.zLeftTwoL), z2.rotation);
+			Instantiate (z3, new Vector3 (3.5f, 1.55f, GM.zRightOneL), z3.rotation);
+			Instantiate (z4, new Vector3 (3.5f, 1.55f, GM.zLeftTwoL), z4.rotation);
+			GM.zLeftOneL += 30;
+			GM.zLeftTwoL += 30;
+			GM.zRightOneL += 30;
+			GM.zRightTwoL += 30;
 			Instantiate (path1, new Vector3(0, 0, GM.zPos), path1.rotation);
 			GM.zPos += 40;
 			Instantiate (colis, new Vector3 (0, 0, GM.zPosColid), colis.rotation);

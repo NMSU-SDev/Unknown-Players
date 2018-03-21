@@ -9,6 +9,11 @@ public class GM : MonoBehaviour {
 	public static int totalScore = 0;
 	public static float timeTotal = 0;
 
+	public static float zLeftOneL = 44;
+	public static float zLeftTwoL = 68;
+	public static float zRightOneL = 56;
+	public static float zRightTwoL = 83;
+
 	public static float vertVel = 0;
 	public static float zPos = 80;
 	public static float zPosColid = 60;

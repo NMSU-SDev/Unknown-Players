@@ -13,4 +13,9 @@ public class zombieRight : MonoBehaviour {
 	void Update () {
 		GetComponent<Rigidbody> ().velocity = new Vector3(-0.9f, 0, -0.9f);
 	}
+	void OnCollisionEnter(Collision other){
+
+		if (other.gameObject.tag == "zomb") 
+			Destroy (other.gameObject);
+	}
 }
