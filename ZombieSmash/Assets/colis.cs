@@ -12,10 +12,15 @@ public class colis : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 	}
+	public Transform spawnpoint;
+	public GameObject prefab;
 
 	void OnCollisionEnter(Collision other){
 
 		if (other.gameObject.tag == "zomb") 
 			Destroy (other.gameObject);
 	}
+
 }
+
+

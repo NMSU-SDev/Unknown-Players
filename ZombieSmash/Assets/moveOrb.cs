@@ -60,10 +60,10 @@ public class moveOrb : MonoBehaviour {
 
 		}
 		if (other.gameObject.tag == "spawner") {
-			Instantiate (z1, new Vector3 (-3.5f, 1.55f, GM.zLeftOneL), z1.rotation);
-			Instantiate (z2, new Vector3 (-3.5f, 1.55f, GM.zLeftTwoL), z2.rotation);
-			Instantiate (z3, new Vector3 (3.5f, 1.55f, GM.zRightOneL), z3.rotation);
-			Instantiate (z4, new Vector3 (3.5f, 1.55f, GM.zLeftTwoL), z4.rotation);
+			/*Instantiate (z1, new Vector3 (-1.5f, 1.55f, GM.zLeftOneL), z1.rotation);
+			Instantiate (z2, new Vector3 (-1.5f, 1.55f, GM.zLeftTwoL), z2.rotation);
+			Instantiate (z3, new Vector3 (1.5f, 1.55f, GM.zRightOneL), z3.rotation);
+			Instantiate (z4, new Vector3 (1.5f, 1.55f, GM.zLeftTwoL), z4.rotation);
 			GM.zLeftOneL += 30;
 			GM.zLeftTwoL += 30;
 			GM.zRightOneL += 30;
@@ -73,12 +73,30 @@ public class moveOrb : MonoBehaviour {
 			Instantiate (colis, new Vector3 (0, 0, GM.zPosColid), colis.rotation);
 			GM.zPosColid += 40;
 			GM.zValAdj = 1;
+			Destroy (other.gameObject); */
 		}
 		if (other.gameObject.tag == "zomb") {
 			GM.zombiesKilled += 1;
 			Destroy (other.gameObject);
 		}
 	}
+
+	void OnTriggerEnter(){
+		Instantiate (z1, new Vector3 (-1.5f, 1.55f, GM.zLeftOneL), z1.rotation);
+		Instantiate (z2, new Vector3 (-1.5f, 1.55f, GM.zLeftTwoL), z2.rotation);
+		Instantiate (z3, new Vector3 (1.5f, 1.55f, GM.zRightOneL), z3.rotation);
+		Instantiate (z4, new Vector3 (1.5f, 1.55f, GM.zLeftTwoL), z4.rotation);
+		GM.zLeftOneL += 30;
+		GM.zLeftTwoL += 30;
+		GM.zRightOneL += 30;
+		GM.zRightTwoL += 30;
+		Instantiate (path1, new Vector3(0, 0, GM.zPos), path1.rotation);
+		GM.zPos += 40;
+		Instantiate (colis, new Vector3 (0, 0, GM.zPosColid), colis.rotation);
+		GM.zPosColid += 40;
+		GM.zValAdj = 1;
+	}
+
 
 	IEnumerator stopSlide()
 	{
