@@ -9,10 +9,18 @@ public class createObject : MonoBehaviour {
 		
 	}
 	
-	public Transform spawnpoint;
-	public GameObject prefab;
+
+	public Transform obj1;
+	public Transform obj2;
+	public Transform obj3;
 
 	void OnTriggerEnter(){
-		Instantiate(prefab, spawnpoint.position, spawnpoint.rotation);
-}
+		Instantiate (obj1, new Vector3 (-1.5f, 1.55f, GM.ob1pos), obj1.rotation);
+		Instantiate (obj2, new Vector3 (1.5f, 1.55f, GM.ob2pos), obj2.rotation);
+		Instantiate (obj3, new Vector3 (1.5f, 1.55f, GM.ob3pos), obj3.rotation);
+		GM.ob1pos += 40;
+		GM.ob2pos +=40;
+		GM.ob3pos += 40;
+
+	}
 }

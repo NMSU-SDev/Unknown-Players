@@ -19,6 +19,10 @@ public class GM : MonoBehaviour {
 	public static float zPosColid = 60;
 	public static float zValAdj = 2.0f;
 
+	public static float ob1pos = 45;
+	public static float ob2pos = 55;
+	public static float ob3pos = 65;
+
 	public float waitToLoad = 0;
 
 	public Transform bb1;
