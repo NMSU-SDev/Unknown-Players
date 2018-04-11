@@ -13,14 +13,17 @@ public class createObject : MonoBehaviour {
 	public Transform obj1;
 	public Transform obj2;
 	public Transform obj3;
+	public Transform power;
 
 	void OnTriggerEnter(){
-		Instantiate (obj1, new Vector3 (-1.5f, 1.55f, GM.ob1pos), obj1.rotation);
-		Instantiate (obj2, new Vector3 (1.5f, 1.55f, GM.ob2pos), obj2.rotation);
-		Instantiate (obj3, new Vector3 (1.5f, 1.55f, GM.ob3pos), obj3.rotation);
+		Instantiate (obj1, new Vector3 (-1.5f, 0, GM.ob1pos), obj1.rotation);
+		Instantiate (obj2, new Vector3 (1.5f, 0.5f, GM.ob2pos), obj2.rotation);
+		Instantiate (obj3, new Vector3 (1.5f, 1.5f, GM.ob3pos), obj3.rotation);
+		Instantiate (power, new Vector3 (0, 1.5f, GM.powerPos), power.rotation);
 		GM.ob1pos += 40;
 		GM.ob2pos +=40;
 		GM.ob3pos += 40;
+		GM.powerPos += 40;
 
 	}
 }

@@ -23,6 +23,8 @@ public class GM : MonoBehaviour {
 	public static float ob2pos = 55;
 	public static float ob3pos = 65;
 
+	public static float powerPos = 75;
+
 	public float waitToLoad = 0;
 
 	public Transform bb1;
