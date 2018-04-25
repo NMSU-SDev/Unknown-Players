@@ -53,7 +53,7 @@ public class moveOrb : MonoBehaviour {
 			GM.gameStatus = "dead";
 		}
 
-		if (other.gameObject.name == "powerUp") {
+		if (other.gameObject.tag == "powerUp") {
 			Destroy (other.gameObject);
 			GM.zValAdj = 8;
 			StartCoroutine (stopSlide2 ());
