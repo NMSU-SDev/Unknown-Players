@@ -1,16 +1,11 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class moveCamera : MonoBehaviour {
-
-	// Use this for initialization
-	void Start () {
-
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		GetComponent<Rigidbody> ().velocity = new Vector3(0, GM.Instance.vertVel, 4*GM.Instance.zValAdj);
+	public Transform target;
+	public float smoothSpeed = 0.125f;
+	public Vector3 offset;
+	void LateUpdate ()
+	{
+		transform.position = target.position + offset;
 	}
 }

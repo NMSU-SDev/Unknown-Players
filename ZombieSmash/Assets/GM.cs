@@ -46,7 +46,7 @@ public class GM : MonoBehaviour {
 		if(gameStatus == "dead"){
 			waitToLoad += Time.deltaTime;
 		}
-		if (waitToLoad > 2) {
+		if (waitToLoad > 0.2f) {
 			SceneManager.LoadScene ("GameOver");
 		}
 	}

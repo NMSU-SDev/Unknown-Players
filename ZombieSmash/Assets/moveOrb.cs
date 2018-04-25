@@ -47,9 +47,8 @@ public class moveOrb : MonoBehaviour {
 	void OnCollisionEnter(Collision other)
 	{
 		if (other.gameObject.tag == "killa") {
-			Destroy (gameObject);
 			GM.Instance.zValAdj = 0;
-			Instantiate (boomObj, transform.position, boomObj.rotation);
+			//Instantiate (boomObj, transform.position, boomObj.rotation);
 			GM.Instance.gameStatus = "dead";
 		}
 
