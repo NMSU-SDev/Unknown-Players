@@ -27,7 +27,7 @@ public class moveOrb : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		GetComponent<Rigidbody> ().velocity = new Vector3(horizVel, GM.vertVel, 4*GM.zValAdj);
+		GetComponent<Rigidbody> ().velocity = new Vector3(horizVel, GM.Instance.vertVel, 4*GM.Instance.zValAdj);
 
 		if ((Input.GetKeyDown(moveLeft)) &&(laneNum > 0) && (controlLocked == "false")) {
 			horizVel = -2;
@@ -48,14 +48,14 @@ public class moveOrb : MonoBehaviour {
 	{
 		if (other.gameObject.tag == "killa") {
 			Destroy (gameObject);
-			GM.zValAdj = 0;
+			GM.Instance.zValAdj = 0;
 			Instantiate (boomObj, transform.position, boomObj.rotation);
-			GM.gameStatus = "dead";
+			GM.Instance.gameStatus = "dead";
 		}
 
 		if (other.gameObject.tag == "powerUp") {
 			Destroy (other.gameObject);
-			GM.zValAdj = 8;
+			GM.Instance.zValAdj = 8;
 			StartCoroutine (stopSlide2 ());
 
 		}
@@ -76,25 +76,25 @@ public class moveOrb : MonoBehaviour {
 			Destroy (other.gameObject); */
 		}
 		if (other.gameObject.tag == "zomb") {
-			GM.zombiesKilled += 1;
+			GM.Instance.zombiesKilled += 1;
 			Destroy (other.gameObject);
 		}
 	}
 
 	void OnTriggerEnter(){
-		Instantiate (z1, new Vector3 (-1.5f, 1.55f, GM.zLeftOneL), z1.rotation);
-		Instantiate (z2, new Vector3 (-1.5f, 1.55f, GM.zLeftTwoL), z2.rotation);
-		Instantiate (z3, new Vector3 (1.5f, 1.55f, GM.zRightOneL), z3.rotation);
-		Instantiate (z4, new Vector3 (1.5f, 1.55f, GM.zLeftTwoL), z4.rotation);
-		GM.zLeftOneL += 30;
-		GM.zLeftTwoL += 30;
-		GM.zRightOneL += 30;
-		GM.zRightTwoL += 30;
-		Instantiate (path1, new Vector3(0, 0, GM.zPos), path1.rotation);
-		GM.zPos += 40;
-		Instantiate (colis, new Vector3 (0, 0, GM.zPosColid), colis.rotation);
-		GM.zPosColid += 40;
-		GM.zValAdj = 1;
+		Instantiate (z1, new Vector3 (-1.5f, 1.55f, GM.Instance.zLeftOneL), z1.rotation);
+		Instantiate (z2, new Vector3 (-1.5f, 1.55f, GM.Instance.zLeftTwoL), z2.rotation);
+		Instantiate (z3, new Vector3 (1.5f, 1.55f, GM.Instance.zRightOneL), z3.rotation);
+		Instantiate (z4, new Vector3 (1.5f, 1.55f, GM.Instance.zLeftTwoL), z4.rotation);
+		GM.Instance.zLeftOneL += 30;
+		GM.Instance.zLeftTwoL += 30;
+		GM.Instance.zRightOneL += 30;
+		GM.Instance.zRightTwoL += 30;
+		Instantiate (path1, new Vector3(0, 0, GM.Instance.zPos), path1.rotation);
+		GM.Instance.zPos += 40;
+		Instantiate (colis, new Vector3 (0, 0, GM.Instance.zPosColid), colis.rotation);
+		GM.Instance.zPosColid += 40;
+		GM.Instance.zValAdj = 1;
 	}
 
 
@@ -107,6 +107,6 @@ public class moveOrb : MonoBehaviour {
 	IEnumerator stopSlide2()
 	{
 		yield return new WaitForSeconds(2.5f);
-		GM.zValAdj = 2;
+		GM.Instance.zValAdj = 2;
 	}
 }
