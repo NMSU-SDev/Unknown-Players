@@ -74,6 +74,7 @@
      <Compile Include="Assets\mainMenu.cs" />
      <Compile Include="Assets\moveCamera.cs" />
      <Compile Include="Assets\moveOrb.cs" />
+     <Compile Include="Assets\options.cs" />
      <Compile Include="Assets\pause.cs" />
      <Compile Include="Assets\restart.cs" />
      <Compile Include="Assets\score.cs" />

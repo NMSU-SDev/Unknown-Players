@@ -201,6 +201,7 @@
 'Assets/mainMenu.cs'
 'Assets/moveCamera.cs'
 'Assets/moveOrb.cs'
+'Assets/options.cs'
 'Assets/pause.cs'
 'Assets/restart.cs'
 'Assets/score.cs'
