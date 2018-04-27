@@ -20,8 +20,15 @@ public class moveOrb : MonoBehaviour {
 	public Transform z3;
 	public Transform z4;
 
+	AudioSource audio1;
+	AudioSource audio2;
+	AudioSource audio3;
 	// Use this for initialization
 	void Start () {
+		AudioSource[] audios = GetComponents<AudioSource>();
+		audio1 = audios[0];
+		audio2 = audios[1];
+		audio3 = audios [2];
 
 	}
 	
@@ -48,6 +55,7 @@ public class moveOrb : MonoBehaviour {
 	{
 		if (other.gameObject.tag == "killa") {
 			GM.Instance.zValAdj = 0;
+			audio1.Play();
 			//Instantiate (boomObj, transform.position, boomObj.rotation);
 			GM.Instance.gameStatus = "dead";
 		}
@@ -56,27 +64,14 @@ public class moveOrb : MonoBehaviour {
 			Destroy (other.gameObject);
 			GM.Instance.zValAdj = 8;
 			StartCoroutine (stopSlide2 ());
+			audio3.Play ();
 
 		}
-		if (other.gameObject.tag == "spawner") {
-			/*Instantiate (z1, new Vector3 (-1.5f, 1.55f, GM.zLeftOneL), z1.rotation);
-			Instantiate (z2, new Vector3 (-1.5f, 1.55f, GM.zLeftTwoL), z2.rotation);
-			Instantiate (z3, new Vector3 (1.5f, 1.55f, GM.zRightOneL), z3.rotation);
-			Instantiate (z4, new Vector3 (1.5f, 1.55f, GM.zLeftTwoL), z4.rotation);
-			GM.zLeftOneL += 30;
-			GM.zLeftTwoL += 30;
-			GM.zRightOneL += 30;
-			GM.zRightTwoL += 30;
-			Instantiate (path1, new Vector3(0, 0, GM.zPos), path1.rotation);
-			GM.zPos += 40;
-			Instantiate (colis, new Vector3 (0, 0, GM.zPosColid), colis.rotation);
-			GM.zPosColid += 40;
-			GM.zValAdj = 1;
-			Destroy (other.gameObject); */
-		}
+
 		if (other.gameObject.tag == "zomb") {
 			GM.Instance.zombiesKilled += 1;
 			Destroy (other.gameObject);
+			audio2.Play();
 		}
 	}
 
