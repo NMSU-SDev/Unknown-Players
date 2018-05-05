@@ -17,7 +17,8 @@ public class GM : MonoBehaviour {
 	public float vertVel = 0;
 	public float zPos = 80;
 	public float zPosColid = 60;
-	public float zValAdj = 2.0f;
+	public float zValAdj = 2;
+	public float zHolder = 2;
 
 	public float ob1pos = 45;
 	public float ob2pos = 55;

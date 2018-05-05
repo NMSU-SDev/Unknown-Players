@@ -76,10 +76,10 @@ public class moveOrb : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(){
-		Instantiate (z1, new Vector3 (-1.5f, 1.55f, GM.Instance.zLeftOneL), z1.rotation);
-		Instantiate (z2, new Vector3 (-1.5f, 1.55f, GM.Instance.zLeftTwoL), z2.rotation);
-		Instantiate (z3, new Vector3 (1.5f, 1.55f, GM.Instance.zRightOneL), z3.rotation);
-		Instantiate (z4, new Vector3 (1.5f, 1.55f, GM.Instance.zLeftTwoL), z4.rotation);
+		Instantiate (z1, new Vector3 (-3.5f, 0.6f, GM.Instance.zLeftOneL), z1.rotation);
+		Instantiate (z2, new Vector3 (-3.5f, 0.6f, GM.Instance.zLeftTwoL), z2.rotation);
+		Instantiate (z3, new Vector3 (3.5f, 0.6f, GM.Instance.zRightOneL), z3.rotation);
+		Instantiate (z4, new Vector3 (3.5f, 0.6f, GM.Instance.zLeftTwoL), z4.rotation);
 		GM.Instance.zLeftOneL += 30;
 		GM.Instance.zLeftTwoL += 30;
 		GM.Instance.zRightOneL += 30;
@@ -101,6 +101,6 @@ public class moveOrb : MonoBehaviour {
 	IEnumerator stopSlide2()
 	{
 		yield return new WaitForSeconds(2.5f);
-		GM.Instance.zValAdj = 2;
+		GM.Instance.zValAdj = GM.Instance.zHolder;
 	}
 }
