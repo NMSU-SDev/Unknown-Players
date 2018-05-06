@@ -36,7 +36,7 @@ public class moveOrb : MonoBehaviour {
 	void Update () {
 		GetComponent<Rigidbody> ().velocity = new Vector3(horizVel, GM.Instance.vertVel, 4*GM.Instance.zValAdj);
 
-		if ((Input.GetKeyDown(moveLeft)) &&(laneNum > 0) && (controlLocked == "false")) {
+		if ((Input.GetKeyDown(moveLeft)) &&(laneNum > -1) && (controlLocked == "false")) {
 			horizVel = -2;
 			laneNum -= 1;
 			StartCoroutine (stopSlide ());
