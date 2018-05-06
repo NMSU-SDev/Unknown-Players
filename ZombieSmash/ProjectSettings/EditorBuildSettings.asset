@@ -17,3 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Options.unity
     guid: e790b1ce3b1ee41b0bffa8fc254806f3
+  - enabled: 1
+    path: Assets/HighScores.unity
+    guid: 7ef5b17faaf4f49ed94d3972da28c88f

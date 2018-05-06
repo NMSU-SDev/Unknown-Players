@@ -25,6 +25,7 @@ public class moveOrb : MonoBehaviour {
 	AudioSource audio3;
 	// Use this for initialization
 	void Start () {
+		//int[] scores = new int[5];
 		AudioSource[] audios = GetComponents<AudioSource>();
 		audio1 = audios[0];
 		audio2 = audios[1];
@@ -58,6 +59,42 @@ public class moveOrb : MonoBehaviour {
 			audio1.Play();
 			//Instantiate (boomObj, transform.position, boomObj.rotation);
 			GM.Instance.gameStatus = "dead";
+			GM.Instance.totalScore = (int)GM.Instance.timeTotal * 10 + GM.Instance.zombiesKilled * 100;
+			if (GM.Instance.totalScore > PlayerPrefs.GetInt ("HighScore")) {
+				if(PlayerPrefs.GetInt ("HighScore3") != 0)
+					PlayerPrefs.SetInt ("HighScore4", PlayerPrefs.GetInt ("HighScore3"));
+				if(PlayerPrefs.GetInt ("HighScore2") != 0)
+					PlayerPrefs.SetInt ("HighScore3", PlayerPrefs.GetInt ("HighScore2"));
+				if(PlayerPrefs.GetInt ("HighScore1") != 0)
+					PlayerPrefs.SetInt ("HighScore2", PlayerPrefs.GetInt ("HighScore1"));
+				if(PlayerPrefs.GetInt ("HighScore") != 0)
+					PlayerPrefs.SetInt ("HighScore1", PlayerPrefs.GetInt ("HighScore"));
+				PlayerPrefs.SetInt ("HighScore", GM.Instance.totalScore);
+			}
+			else if (GM.Instance.totalScore > PlayerPrefs.GetInt ("HighScore1")) {
+				if(PlayerPrefs.GetInt ("HighScore3") != 0)
+				PlayerPrefs.SetInt ("HighScore4", PlayerPrefs.GetInt ("HighScore3"));
+				if(PlayerPrefs.GetInt ("HighScore2") != 0)
+				PlayerPrefs.SetInt ("HighScore3", PlayerPrefs.GetInt ("HighScore2"));
+				if(PlayerPrefs.GetInt ("HighScore1") != 0)
+				PlayerPrefs.SetInt ("HighScore2", PlayerPrefs.GetInt ("HighScore1"));
+				PlayerPrefs.SetInt ("HighScore1", GM.Instance.totalScore);
+			}
+			else if (GM.Instance.totalScore > PlayerPrefs.GetInt ("HighScore2")) {
+				if(PlayerPrefs.GetInt ("HighScore3") != 0)
+				PlayerPrefs.SetInt ("HighScore4", PlayerPrefs.GetInt ("HighScore3"));
+				if(PlayerPrefs.GetInt ("HighScore2") != 0)
+				PlayerPrefs.SetInt ("HighScore3", PlayerPrefs.GetInt ("HighScore2"));
+				PlayerPrefs.SetInt ("HighScore2", GM.Instance.totalScore);
+			}
+			else if (GM.Instance.totalScore > PlayerPrefs.GetInt ("HighScore3")) {
+				if(PlayerPrefs.GetInt ("HighScore3") != 0)
+				PlayerPrefs.SetInt ("HighScore4", PlayerPrefs.GetInt ("HighScore3"));
+				PlayerPrefs.SetInt ("HighScore3", GM.Instance.totalScore);
+			}
+			else if (GM.Instance.totalScore > PlayerPrefs.GetInt ("HighScore4")) {
+				PlayerPrefs.SetInt ("HighScore4", GM.Instance.totalScore);
+			}
 		}
 
 		if (other.gameObject.tag == "powerUp") {

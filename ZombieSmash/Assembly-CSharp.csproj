@@ -71,6 +71,7 @@
      <Compile Include="Assets\Game Jam Template\Scripts\Menu\ShowPanels.cs" />
      <Compile Include="Assets\Game Jam Template\Scripts\Menu\StartOptions.cs" />
      <Compile Include="Assets\GM.cs" />
+     <Compile Include="Assets\HighScores.cs" />
      <Compile Include="Assets\mainMenu.cs" />
      <Compile Include="Assets\moveCamera.cs" />
      <Compile Include="Assets\moveOrb.cs" />
