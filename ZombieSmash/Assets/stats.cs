@@ -18,10 +18,10 @@ public class stats : MonoBehaviour {
 			GetComponent<TextMesh> ().text = "Time Elapsed: " + (int)GM.Instance.timeTotal + " seconds";
 		}
 		if (gameObject.name == "totalScore") {
-			GetComponent<TextMesh> ().text = "Total Score: " + ((int)GM.Instance.timeTotal*10 + GM.Instance.zombiesKilled*100 - 10);
+			GetComponent<TextMesh> ().text = "Total Score: " + GM.Instance.totalScore;
 		}
-		if (gameObject.name == "highScore") {
-			GetComponent<TextMesh> ().text = "HighScores: " + PlayerPrefs.GetInt ("HighScore");
-		}
+		if(gameObject.name == "highScore") {
+			GetComponent<TextMesh> ().text = "HighScore: " + PlayerPrefs.GetInt ("HighScore");
 	}
+}
 }

@@ -19,6 +19,7 @@ public class moveOrb : MonoBehaviour {
 	public Transform z2;
 	public Transform z3;
 	public Transform z4;
+	public float zValAdj;
 
 	AudioSource audio1;
 	AudioSource audio2;
@@ -30,32 +31,27 @@ public class moveOrb : MonoBehaviour {
 		audio1 = audios[0];
 		audio2 = audios[1];
 		audio3 = audios [2];
+		zValAdj = 10;
 
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		GetComponent<Rigidbody> ().velocity = new Vector3(horizVel, GM.Instance.vertVel, 4*GM.Instance.zValAdj);
+		GetComponent<Rigidbody> ().velocity = new Vector3(0, 0, zValAdj);
 
-		if ((Input.GetKeyDown(moveLeft)) &&(laneNum > -1) && (controlLocked == "false")) {
-			horizVel = -2;
-			laneNum -= 1;
-			StartCoroutine (stopSlide ());
-			controlLocked = "true";
+		if ((Input.GetKey (moveLeft))) {
+			GetComponent<Rigidbody> ().velocity = new Vector3 (-5, 0, zValAdj);
 		}
-		if ((Input.GetKeyDown(moveRight))&&(laneNum < 6) && (controlLocked == "false")) {
-			horizVel = 2;
-			laneNum += 1;
-			StartCoroutine (stopSlide ());
-			controlLocked = "true";
+		if ((Input.GetKey (moveRight))) {
+			GetComponent<Rigidbody> ().velocity = new Vector3 (5, 0, zValAdj);
 		}
 
 	}
 
-	void OnCollisionEnter(Collision other)
+	public IEnumerator OnCollisionEnter(Collision other)
 	{
 		if (other.gameObject.tag == "killa") {
-			GM.Instance.zValAdj = 0;
+			zValAdj = 0;
 			audio1.Play();
 			//Instantiate (boomObj, transform.position, boomObj.rotation);
 			GM.Instance.gameStatus = "dead";
@@ -99,8 +95,9 @@ public class moveOrb : MonoBehaviour {
 
 		if (other.gameObject.tag == "powerUp") {
 			Destroy (other.gameObject);
-			GM.Instance.zValAdj = 8;
-			StartCoroutine (stopSlide2 ());
+			zValAdj = 20;
+			yield return new WaitForSeconds(1.5f);
+			zValAdj = 10;
 			audio3.Play ();
 
 		}
@@ -125,7 +122,6 @@ public class moveOrb : MonoBehaviour {
 		GM.Instance.zPos += 40;
 		Instantiate (colis, new Vector3 (0, 0, GM.Instance.zPosColid), colis.rotation);
 		GM.Instance.zPosColid += 40;
-		GM.Instance.zValAdj = 1;
 	}
 
 
@@ -137,7 +133,7 @@ public class moveOrb : MonoBehaviour {
 	}
 	IEnumerator stopSlide2()
 	{
-		yield return new WaitForSeconds(2.5f);
-		GM.Instance.zValAdj = GM.Instance.zHolder;
+		yield return new WaitForSeconds(1.5f);
+		zValAdj = 5;
 	}
 }
