@@ -35,11 +35,13 @@ public class createObject : MonoBehaviour {
 		Instantiate (obj3, new Vector3 (1.5f, 1, GM.Instance.ob3pos), obj3.rotation);
 		Instantiate (obj3, new Vector3 (1.5f, 1, GM.Instance.ob3pos + 10), obj3.rotation);
 
-		Instantiate (power, new Vector3 (0, 1, GM.Instance.powerPos), power.rotation);
+		Instantiate (power, new Vector3 (Random.Range(-6.5f,6.5f), 1, GM.Instance.powerPos + Random.Range(-6.5f,6.5f)), power.rotation);
 		if (PlayerPrefs.GetFloat ("speed") == 16.0f) {
-			Instantiate (obj1, new Vector3 (-2.8f, 1, GM.Instance.ob1pos + 20), obj1.rotation);
+			Instantiate (obj1, new Vector3 (Random.Range(-6.5f,6.5f), 1, GM.Instance.ob1pos + 20), obj1.rotation);
 			Instantiate (obj2, new Vector3 (2.6f, 1, GM.Instance.ob2pos + 14), obj2.rotation);
-			Instantiate (obj3, new Vector3 (0, 1, GM.Instance.ob3pos + 30), obj3.rotation);
+			Instantiate (obj3, new Vector3 (Random.Range(-6.5f,6.5f), 1, GM.Instance.ob3pos + 30), obj3.rotation);
+			Instantiate (power, new Vector3 (Random.Range(-6.5f,6.5f), 1, GM.Instance.powerPos + Random.Range(-6.5f,6.5f) + 10), power.rotation);
+
 		}
 		GM.Instance.ob1pos += 40;
 		GM.Instance.ob2pos +=40;
