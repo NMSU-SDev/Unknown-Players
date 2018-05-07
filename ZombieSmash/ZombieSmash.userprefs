@@ -1,24 +1,25 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/HighScores.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/moveOrb.cs">
     <Files>
-      <File FileName="Assets/gamePace.cs" Line="19" Column="22" />
+      <File FileName="Assets/createObject.cs" Line="43" Column="118" />
       <File FileName="Assets/GM.cs" Line="20" Column="2" />
-      <File FileName="Assets/moveOrb.cs" Line="100" Column="17" />
       <File FileName="Assets/moveCamera.cs" Line="6" Column="24" />
       <File FileName="Assets/restart.cs" Line="10" Column="15" />
       <File FileName="Assets/stats.cs" Line="22" Column="4" />
       <File FileName="Assets/score.cs" Line="8" Column="90" />
-      <File FileName="Assets/zScores.cs" Line="4" Column="14" />
-      <File FileName="Assets/createObject.cs" Line="11" Column="2" />
-      <File FileName="Assets/mainMenu.cs" Line="12" Column="1" />
-      <File FileName="Assets/TimeElapsedDisp.cs" Line="9" Column="25" />
-      <File FileName="Assets/pause.cs" Line="30" Column="2" />
+      <File FileName="Assets/zScores.cs" Line="1" Column="1" />
+      <File FileName="Assets/mainMenu.cs" Line="1" Column="1" />
+      <File FileName="Assets/TimeElapsedDisp.cs" Line="1" Column="1" />
+      <File FileName="Assets/pause.cs" Line="1" Column="1" />
       <File FileName="Assets/options.cs" Line="13" Column="1" />
-      <File FileName="Assets/zombieRight.cs" Line="1" Column="1" />
-      <File FileName="Assets/ZombieLeft.cs" Line="1" Column="1" />
+      <File FileName="Assets/zombieRight.cs" Line="14" Column="63" />
+      <File FileName="Assets/ZombieLeft.cs" Line="14" Column="66" />
       <File FileName="Assets/colis.cs" Line="1" Column="1" />
       <File FileName="Assets/HighScores.cs" Line="30" Column="43" />
+      <File FileName="Assets/moveOrb.cs" Line="107" Column="5" />
+      <File FileName="Assets/pace.cs" Line="1" Column="1" />
+      <File FileName="Assets/sounds.cs" Line="3" Column="58" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

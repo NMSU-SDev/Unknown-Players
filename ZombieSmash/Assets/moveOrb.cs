@@ -27,7 +27,7 @@ public class moveOrb : MonoBehaviour {
 		audio1 = audios[0];
 		audio2 = audios[1];
 		audio3 = audios [2];
-		zValAdj = PlayerPrefs.GetFloat ("speed");;
+		zValAdj = PlayerPrefs.GetFloat ("speed");
 
 	}
 	
@@ -41,6 +41,7 @@ public class moveOrb : MonoBehaviour {
 		if ((Input.GetKey (moveRight))) {
 			GetComponent<Rigidbody> ().velocity = new Vector3 (5, 0, zValAdj);
 		}
+
 
 	}
 
@@ -127,4 +128,5 @@ public class moveOrb : MonoBehaviour {
 		yield return new WaitForSeconds(1.5f);
 		zValAdj = PlayerPrefs.GetFloat("speed");
 	}
+		
 }

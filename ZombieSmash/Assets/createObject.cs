@@ -8,7 +8,7 @@ public class createObject : MonoBehaviour {
 	void Start () {
 		
 	}
-	
+
 
 	public Transform obj1;
 	public Transform obj2;
@@ -47,6 +47,8 @@ public class createObject : MonoBehaviour {
 		GM.Instance.ob2pos +=40;
 		GM.Instance.ob3pos += 40;
 		GM.Instance.powerPos += 40;
+
+
 
 			
 
