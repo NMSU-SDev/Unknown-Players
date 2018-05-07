@@ -48,7 +48,8 @@ public class moveOrb : MonoBehaviour {
 	{
 		if (other.gameObject.tag == "killa") {
 			zValAdj = 0;
-			audio1.Play();
+			if(PlayerPrefs.GetInt("sound") == 1)
+				audio1.Play();
 			//Instantiate (boomObj, transform.position, boomObj.rotation);
 			GM.Instance.gameStatus = "dead";
 			GM.Instance.totalScore = (int)GM.Instance.timeTotal * 10 + GM.Instance.zombiesKilled * 100;
@@ -94,14 +95,16 @@ public class moveOrb : MonoBehaviour {
 			zValAdj = PlayerPrefs.GetFloat("speed") + 9.0f;
 			yield return new WaitForSeconds(1.5f);
 			zValAdj = PlayerPrefs.GetFloat("speed");
-			audio3.Play ();
+			if(PlayerPrefs.GetInt("sound") == 1)
+				audio3.Play ();
 
 		}
 
 		if (other.gameObject.tag == "zomb") {
 			GM.Instance.zombiesKilled += 1;
 			Destroy (other.gameObject);
-			audio2.Play();
+			if(PlayerPrefs.GetInt("sound") == 1)
+				audio2.Play();
 		}
 	}
 

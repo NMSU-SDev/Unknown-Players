@@ -81,6 +81,7 @@
      <Compile Include="Assets\PlayerProgress.cs" />
      <Compile Include="Assets\restart.cs" />
      <Compile Include="Assets\score.cs" />
+     <Compile Include="Assets\sounds.cs" />
      <Compile Include="Assets\stats.cs" />
      <Compile Include="Assets\TimeElapsedDisp.cs" />
      <Compile Include="Assets\ZombieLeft.cs" />
