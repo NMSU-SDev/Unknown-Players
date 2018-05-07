@@ -15,10 +15,6 @@ public class moveOrb : MonoBehaviour {
 	public Transform boomObj;
 	public Transform path1;
 	public Transform colis;
-	public Transform z1;
-	public Transform z2;
-	public Transform z3;
-	public Transform z4;
 	public float zValAdj;
 
 	AudioSource audio1;
@@ -31,7 +27,7 @@ public class moveOrb : MonoBehaviour {
 		audio1 = audios[0];
 		audio2 = audios[1];
 		audio3 = audios [2];
-		zValAdj = 10;
+		zValAdj = PlayerPrefs.GetFloat ("speed");;
 
 	}
 	
@@ -95,9 +91,9 @@ public class moveOrb : MonoBehaviour {
 
 		if (other.gameObject.tag == "powerUp") {
 			Destroy (other.gameObject);
-			zValAdj = 20;
+			zValAdj = PlayerPrefs.GetFloat("speed") + 9.0f;
 			yield return new WaitForSeconds(1.5f);
-			zValAdj = 10;
+			zValAdj = PlayerPrefs.GetFloat("speed");
 			audio3.Play ();
 
 		}
@@ -110,14 +106,6 @@ public class moveOrb : MonoBehaviour {
 	}
 
 	void OnTriggerEnter(){
-		Instantiate (z1, new Vector3 (-3.5f, 0.6f, GM.Instance.zLeftOneL), z1.rotation);
-		Instantiate (z2, new Vector3 (-3.5f, 0.6f, GM.Instance.zLeftTwoL), z2.rotation);
-		Instantiate (z3, new Vector3 (3.5f, 0.6f, GM.Instance.zRightOneL), z3.rotation);
-		Instantiate (z4, new Vector3 (3.5f, 0.6f, GM.Instance.zLeftTwoL), z4.rotation);
-		GM.Instance.zLeftOneL += 30;
-		GM.Instance.zLeftTwoL += 30;
-		GM.Instance.zRightOneL += 30;
-		GM.Instance.zRightTwoL += 30;
 		Instantiate (path1, new Vector3(0, 0, GM.Instance.zPos), path1.rotation);
 		GM.Instance.zPos += 40;
 		Instantiate (colis, new Vector3 (0, 0, GM.Instance.zPosColid), colis.rotation);
@@ -134,6 +122,6 @@ public class moveOrb : MonoBehaviour {
 	IEnumerator stopSlide2()
 	{
 		yield return new WaitForSeconds(1.5f);
-		zValAdj = 5;
+		zValAdj = PlayerPrefs.GetFloat("speed");
 	}
 }

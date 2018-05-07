@@ -11,7 +11,7 @@ public class zombieRight : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		GetComponent<Rigidbody> ().velocity = new Vector3(-0.2f, 0, -0.6f);
+		GetComponent<Rigidbody> ().velocity = new Vector3(-1f, 0, -1f);
 	}
 	void OnCollisionEnter(Collision other){
 

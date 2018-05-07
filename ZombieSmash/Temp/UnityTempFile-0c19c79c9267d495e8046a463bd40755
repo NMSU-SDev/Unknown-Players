@@ -203,6 +203,7 @@
 'Assets/moveCamera.cs'
 'Assets/moveOrb.cs'
 'Assets/options.cs'
+'Assets/pace.cs'
 'Assets/pause.cs'
 'Assets/PlayerProgress.cs'
 'Assets/restart.cs'
