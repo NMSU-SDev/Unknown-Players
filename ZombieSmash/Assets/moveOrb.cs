@@ -14,6 +14,8 @@ public class moveOrb : MonoBehaviour {
 
 	public Transform boomObj;
 	public Transform path1;
+	public Transform left;
+	public Transform right;
 	public Transform colis;
 	public float zValAdj;
 
@@ -114,6 +116,7 @@ public class moveOrb : MonoBehaviour {
 		GM.Instance.zPos += 40;
 		Instantiate (colis, new Vector3 (0, 0, GM.Instance.zPosColid), colis.rotation);
 		GM.Instance.zPosColid += 40;
+		
 	}
 
 

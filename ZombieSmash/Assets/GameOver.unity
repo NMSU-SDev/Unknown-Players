@@ -358,7 +358,7 @@ TextMesh:
   m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   m_Color:
     serializedVersion: 2
-    rgba: 4278914038
+    rgba: 4278321675
 --- !u!23 &380571577
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -507,9 +507,9 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 567647428}
-  m_Text: 
+  m_Text: total score
   m_OffsetZ: 0
-  m_CharacterSize: 0.3
+  m_CharacterSize: 0.21
   m_LineSpacing: 1
   m_Anchor: 4
   m_Alignment: 1
@@ -520,7 +520,7 @@ TextMesh:
   m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   m_Color:
     serializedVersion: 2
-    rgba: 4280557176
+    rgba: 4278190080
 --- !u!23 &567647431
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -562,7 +562,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 567647428}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.5, y: -1, z: 0}
+  m_LocalPosition: {x: -2.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -779,9 +779,9 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 966041234}
-  m_Text: 
+  m_Text: zombies
   m_OffsetZ: 0
-  m_CharacterSize: 0.3
+  m_CharacterSize: 0.21
   m_LineSpacing: 1
   m_Anchor: 4
   m_Alignment: 1
@@ -792,7 +792,7 @@ TextMesh:
   m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   m_Color:
     serializedVersion: 2
-    rgba: 4281213590
+    rgba: 4278190080
 --- !u!23 &966041237
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -834,7 +834,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 966041234}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.5, y: 3, z: 0}
+  m_LocalPosition: {x: -2.5, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1844,9 +1844,9 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2089820034}
-  m_Text: 
+  m_Text: time
   m_OffsetZ: 0
-  m_CharacterSize: 0.3
+  m_CharacterSize: 0.21
   m_LineSpacing: 1
   m_Anchor: 4
   m_Alignment: 1
@@ -1857,7 +1857,7 @@ TextMesh:
   m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
   m_Color:
     serializedVersion: 2
-    rgba: 4280226040
+    rgba: 4278255631
 --- !u!23 &2089820037
 MeshRenderer:
   m_ObjectHideFlags: 0

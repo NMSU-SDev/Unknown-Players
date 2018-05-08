@@ -24,6 +24,8 @@ public class GM : MonoBehaviour {
 	public float ob2pos = 55;
 	public float ob3pos = 65;
 
+	public float BP = 80;
+
 	public float powerPos = 75;
 
 	public float waitToLoad = 0;
