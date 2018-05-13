@@ -54,22 +54,6 @@
      <Compile Include="Assets\colis.cs" />
      <Compile Include="Assets\createObject.cs" />
      <Compile Include="Assets\effects.cs" />
-     <Compile Include="Assets\Game Jam Template\Scripts\FlexibleUI\FlexibleUI.cs" />
-     <Compile Include="Assets\Game Jam Template\Scripts\FlexibleUI\FlexibleUIButton.cs" />
-     <Compile Include="Assets\Game Jam Template\Scripts\FlexibleUI\FlexibleUIData.cs" />
-     <Compile Include="Assets\Game Jam Template\Scripts\FlexibleUI\FlexibleUIImage.cs" />
-     <Compile Include="Assets\Game Jam Template\Scripts\FlexibleUI\FlexibleUISlider.cs" />
-     <Compile Include="Assets\Game Jam Template\Scripts\FlexibleUI\FlexibleUIText.cs" />
-     <Compile Include="Assets\Game Jam Template\Scripts\Menu\DontDestroy.cs" />
-     <Compile Include="Assets\Game Jam Template\Scripts\Menu\EventSystemChecker.cs" />
-     <Compile Include="Assets\Game Jam Template\Scripts\Menu\MenuObject.cs" />
-     <Compile Include="Assets\Game Jam Template\Scripts\Menu\MenuSettings.cs" />
-     <Compile Include="Assets\Game Jam Template\Scripts\Menu\Pause.cs" />
-     <Compile Include="Assets\Game Jam Template\Scripts\Menu\PlayMusic.cs" />
-     <Compile Include="Assets\Game Jam Template\Scripts\Menu\QuitApplication.cs" />
-     <Compile Include="Assets\Game Jam Template\Scripts\Menu\SetAudioLevels.cs" />
-     <Compile Include="Assets\Game Jam Template\Scripts\Menu\ShowPanels.cs" />
-     <Compile Include="Assets\Game Jam Template\Scripts\Menu\StartOptions.cs" />
      <Compile Include="Assets\GM.cs" />
      <Compile Include="Assets\HighScores.cs" />
      <Compile Include="Assets\mainMenu.cs" />
@@ -88,9 +72,6 @@
      <Compile Include="Assets\zombieRight.cs" />
      <Compile Include="Assets\zScores.cs" />
      <None Include="Assets\MentalDreamsAssets\BarrelPack\ReadMe!.txt" />
-     <None Include="Assets\Game Jam Template\Fonts\OpenSans\License!.txt" />
-     <None Include="Assets\Game Jam Template\GameJamTemplateReadMe.txt" />
-     <None Include="Assets\Game Jam Template\README.txt" />
  <Reference Include="UnityEngine.UIAutomation">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
  </Reference>

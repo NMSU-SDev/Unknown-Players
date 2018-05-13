@@ -20,6 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4136652027942880}
   - component: {fileID: 111455236705316394}
+  - component: {fileID: 122755628310369694}
   m_Layer: 0
   m_Name: powerUp
   m_TagString: powerUp
@@ -127,6 +128,17 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!122 &122755628310369694
+Halo:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1007318980475920}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4286611584
+  m_Size: 1
 --- !u!136 &136364369169163174
 CapsuleCollider:
   m_ObjectHideFlags: 1
